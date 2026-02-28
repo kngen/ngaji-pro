@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a3d22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a6b3a;stop-opacity:1" />
+    </linearGradient>
+    <!-- Gold gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f9e07a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e6b830;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c89010;stop-opacity:1" />
+    </linearGradient>
+    <!-- White glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Soft shadow -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded rect -->
+  <rect width="512" height="512" rx="100" ry="100" fill="url(#bgGrad)"/>
+
+  <!-- Subtle geometric pattern overlay -->
+  <g opacity="0.07">
+    <circle cx="256" cy="256" r="200" fill="none" stroke="white" stroke-width="1"/>
+    <circle cx="256" cy="256" r="160" fill="none" stroke="white" stroke-width="1"/>
+    <circle cx="256" cy="256" r="120" fill="none" stroke="white" stroke-width="1"/>
+    <!-- 8-point star pattern -->
+    <polygon points="256,56 276,236 456,256 276,276 256,456 236,276 56,256 236,236" fill="none" stroke="white" stroke-width="0.8"/>
+  </g>
+
+  <!-- ===== MASJID / MOSQUE ===== -->
+  <g filter="url(#shadow)">
+
+    <!-- Main dome (kubah utama) -->
+    <ellipse cx="256" cy="195" rx="72" ry="68" fill="url(#goldGrad)"/>
+    <rect x="184" y="193" width="144" height="10" fill="url(#goldGrad)"/>
+
+    <!-- Crescent on top of main dome -->
+    <g transform="translate(256, 140)">
+      <!-- Crescent moon -->
+      <circle cx="0" cy="0" r="16" fill="url(#goldGrad)"/>
+      <circle cx="8" cy="-4" r="13" fill="#0a3d22"/>
+      <!-- Star -->
+      <polygon points="22,-14 24,-8 30,-8 25,-4 27,2 22,-2 17,2 19,-4 14,-8 20,-8"
+               fill="url(#goldGrad)" transform="scale(0.7)"/>
+    </g>
+
+    <!-- Side domes (kubah kecil kiri & kanan) -->
+    <!-- Left dome -->
+    <ellipse cx="178" cy="230" rx="38" ry="34" fill="url(#goldGrad)"/>
+    <rect x="140" y="228" width="76" height="8" fill="url(#goldGrad)"/>
+    <!-- Left crescent -->
+    <g transform="translate(178, 200)">
+      <circle cx="0" cy="0" r="8" fill="url(#goldGrad)"/>
+      <circle cx="4" cy="-2" r="6.5" fill="#0a3d22"/>
+    </g>
+
+    <!-- Right dome -->
+    <ellipse cx="334" cy="230" rx="38" ry="34" fill="url(#goldGrad)"/>
+    <rect x="296" y="228" width="76" height="8" fill="url(#goldGrad)"/>
+    <!-- Right crescent -->
+    <g transform="translate(334, 200)">
+      <circle cx="0" cy="0" r="8" fill="url(#goldGrad)"/>
+      <circle cx="4" cy="-2" r="6.5" fill="#0a3d22"/>
+    </g>
+
+    <!-- Main building body -->
+    <rect x="160" y="236" width="192" height="100" rx="4" fill="url(#goldGrad)"/>
+
+    <!-- Left wing -->
+    <rect x="120" y="256" width="44" height="80" rx="4" fill="url(#goldGrad)"/>
+
+    <!-- Right wing -->
+    <rect x="348" y="256" width="44" height="80" rx="4" fill="url(#goldGrad)"/>
+
+    <!-- Main arch / door (mihrab) -->
+    <path d="M228,336 L228,285 Q256,265 284,285 L284,336 Z" fill="#0a3d22"/>
+
+    <!-- Side arches on main body -->
+    <path d="M174,336 L174,275 Q191,262 208,275 L208,336 Z" fill="#0a3d22"/>
+    <path d="M304,336 L304,275 Q321,262 338,275 L338,336 Z" fill="#0a3d22"/>
+
+    <!-- Left wing arch -->
+    <path d="M130,336 L130,283 Q142,272 154,283 L154,336 Z" fill="#0a3d22"/>
+
+    <!-- Right wing arch -->
+    <path d="M358,336 L358,283 Q370,272 382,283 L382,336 Z" fill="#0a3d22"/>
+
+    <!-- Ground / base line -->
+    <rect x="100" y="334" width="312" height="12" rx="6" fill="url(#goldGrad)"/>
+
+    <!-- Minarets (menara) kiri & kanan -->
+    <!-- Left minaret -->
+    <rect x="96" y="200" width="24" height="136" rx="4" fill="url(#goldGrad)"/>
+    <ellipse cx="108" cy="198" rx="16" ry="10" fill="url(#goldGrad)"/>
+    <path d="M100,198 Q108,178 116,198 Z" fill="url(#goldGrad)"/>
+    <!-- Right minaret -->
+    <rect x="392" y="200" width="24" height="136" rx="4" fill="url(#goldGrad)"/>
+    <ellipse cx="404" cy="198" rx="16" ry="10" fill="url(#goldGrad)"/>
+    <path d="M396,198 Q404,178 412,198 Z" fill="url(#goldGrad)"/>
+
+  </g>
+
+  <!-- ===== TEXT "NGAJI PRO" ===== -->
+  <text x="256" y="400"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="52"
+        font-weight="700"
+        letter-spacing="2"
+        text-anchor="middle"
+        fill="url(#goldGrad)"
+        filter="url(#glow)">NGAJI PRO</text>
+
+  <!-- Decorative line under text -->
+  <line x1="156" y1="412" x2="356" y2="412" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+
+  <!-- Tagline -->
+  <text x="256" y="440"
+        font-family="Georgia, serif"
+        font-size="20"
+        letter-spacing="3"
+        text-anchor="middle"
+        fill="#f9e07a"
+        opacity="0.75">TAHFIDH • ABSENSI</text>
+
+</svg>
